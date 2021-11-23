@@ -11,7 +11,7 @@ function NavSmall() {
 			<nav className='nav'>
 				<ul className='nav__list'>
 					<li className='nav__item'>
-						<HomeIcon color={'red'} opacity='1' />
+						<HomeIcon />
 						<NavLink className='nav__link' to='/home'>
 							Home
 						</NavLink>

@@ -1,8 +1,7 @@
 import React from 'react';
 import './ChannelMain.scss';
 import { Carousel } from '@trendyol-js/react-carousel';
-import { useParams } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
+import { useParams } from 'react-router-dom';	
 import { useNavigate } from 'react-router-dom';
 
 import Menu from '../Menu/Menu';
@@ -33,7 +32,7 @@ function ChannelMain({ main, elModal }) {
 		<>
 			<main className='main'>
 				<Menu elModal={elModal} />
-				<section className='channel'>
+				<section className='channel' main={main}>
 					<div className='container'>
 						<div className='post-one__box'>
 							<img
@@ -47,7 +46,7 @@ function ChannelMain({ main, elModal }) {
 								<h1 className='user__name user__name--margin'>
 									{data.username}
 								</h1>
-								<span>245K subscribed</span>
+								<span className='subscribed-num'>245K subscribed</span>
 							</div>
 
 							<div className='single-user__box'>
@@ -120,27 +119,24 @@ function ChannelMain({ main, elModal }) {
 								{video.length > 0 &&
 									video.map((row) => (
 										<li className='item__slider' key={row.id}>
-											<NavLink
-												className='slider__link'
-												to='/videos'
-												onClick={() =>
-													navigate('/video/' + row.id)
-												}>
-												<Carousel>
-													<img
-														className='video__img'
-														src={row.thumbnailUrl}
-														alt='img'
-														width='250'
-														height='150'
-													/>
+											<Carousel>
+												<img
+													className='video__img'
+													src={row.thumbnailUrl}
+													alt='img'
+													width='250'
+													height='150'
+												/>
 
-													<p className='video__title'>
-														{row.title}
-													</p>
-												</Carousel>
 												<p className='video__title'>{row.title}</p>
-											</NavLink>
+											</Carousel>
+											<button
+												className='slider__btn'
+												onClick={() =>
+													navigate('/videos/' + row.id)
+												}>
+												<p className='video__title'>{row.title}</p>
+											</button>
 										</li>
 									))}
 							</ul>

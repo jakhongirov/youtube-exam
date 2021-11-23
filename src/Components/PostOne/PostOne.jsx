@@ -2,7 +2,6 @@ import React from 'react';
 import { Carousel } from '@trendyol-js/react-carousel';
 import './PostOne.scss';
 import { useNavigate } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
 
 import userImg from '../../Assets/Image/Oval.png';
 
@@ -33,20 +32,22 @@ function PostOne() {
 				{data.length > 0 &&
 					data.map((row) => (
 						<li className='item__slider' key={row.id}>
-							<NavLink className='slider__link' to='/vidoe' onClick={() => navigate('/video/' + row.id)}>
-								<Carousel>
-									<img
-										className='video__img'
-										src={row.thumbnailUrl}
-										alt='img'
-										width='250'
-										height='150'
-									/>
+							<Carousel>
+								<img
+									className='video__img'
+									src={row.thumbnailUrl}
+									alt='img'
+									width='250'
+									height='150'
+								/>
 
-									<p className='video__title'>{row.title}</p>
-								</Carousel>
 								<p className='video__title'>{row.title}</p>
-							</NavLink>
+							</Carousel>
+							<button
+								className='slider__btn'
+								onClick={() => navigate('/videos/' + row.id)}>
+								<p className='video__title'>{row.title}</p>	
+							</button>
 						</li>
 					))}
 			</ul>

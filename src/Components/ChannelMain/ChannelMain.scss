@@ -17,6 +17,15 @@
 	margin: 0;
 }
 
+.subscribed-num {
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 16px;
+	color: #c2c2c2;
+}
+
 .single-user__box {
 	display: flex;
 	margin: 0;
@@ -93,7 +102,7 @@
 	color: #c2c2c2;
 }
 
-.slider__btn{
+.slider__btn {
 	display: block;
 	width: 250px;
 	height: 150px;
