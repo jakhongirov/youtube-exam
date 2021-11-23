@@ -23,7 +23,7 @@ function Subscriptions() {
 						<li className='channel__item' key={row.id}>
 							<button
 								className='channels__btn'
-								onClick={() => navigate('/home/' + row.id)}>
+								onClick={() => navigate('/channel/' + row.id)}>
 								<img
 									className='channel__img'
 									src='https://stopdtp.com/images/2021/06/05/sample_user_icon.png'
