@@ -21,12 +21,12 @@
 
 .list__slider {
 	display: flex;
-	width: 1350px;
+	width: 1300px;
 	height: 300px;
 	margin: 0;
 	margin-bottom: 50px;
 	padding: 0;
-	overflow: auto;
+	overflow: hidden;
 }
 
 .item__slider {
@@ -40,6 +40,11 @@
 
 .item__slider + .item__slider {
 	margin-right: 10px;
+}
+
+.slider__link{
+	color: black;
+	text-decoration: none;
 }
 
 .video__title {

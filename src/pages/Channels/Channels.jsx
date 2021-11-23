@@ -1,13 +1,13 @@
 import React from 'react';
 
-function ChannelsPgae() {
+import Header from '../../Components/Header/Header';
+import ChannelMain from '../../Components/ChannelMain/ChannelMain';
+
+function ChannelsPgae({ elMain, elModal }) {
 	return (
 		<>
-			<p>
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis
-				consequatur praesentium voluptate quisquam, nulla modi nam illo
-				libero reiciendis natus.
-			</p>
+			<Header main={elMain} elModal={elModal} />
+			<ChannelMain main={elMain} elModal={elModal} />
 		</>
 	);
 }

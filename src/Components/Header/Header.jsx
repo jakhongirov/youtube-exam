@@ -1,5 +1,5 @@
 import React from 'react';
-import './HomeHeader.scss';
+import './Header.scss';
 import { Link } from 'react-router-dom';
 
 import logo from '../../Assets/Image/Black.svg';
@@ -8,7 +8,7 @@ import menu from '../../Assets/Image/Menu.svg';
 import Search from '../Search/Search';
 import ProfileMenu from '../ProfileMenu/ProfileMenu';
 
-function HomeHeader({ main, elModal }) {
+function Header({ main, elModal }) {
 	const [modal, setModal] = React.useState(false);
 
 	return (
@@ -25,7 +25,7 @@ function HomeHeader({ main, elModal }) {
 									main.current.classList.add('open');
 									elModal.current.classList.add('close');
 								} else if (!modal) {
-									main.current.classList.remove('content');
+									main.current.classList.remove('content');	
 									elModal.current.classList.remove('close');
 									main.current.classList.add('contain');
 								}
@@ -56,4 +56,4 @@ function HomeHeader({ main, elModal }) {
 	);
 }
 
-export default HomeHeader;
+export default Header;

@@ -1,15 +1,13 @@
 import React from 'react';
-import HomeHeader from '../../Components/HomeHeader/HomeHeader';
+
+import Header from '../../Components/Header/Header';
 import HomeMain from '../../Components/HomeMain/HomeMain';
 
-function Home() {
-	const elMain = React.useRef();
-	const elModal = React.useRef();
-
+function Home({ elMain, elModal }) {
 	return (
 		<>
-			<HomeHeader main={elMain} elModal={elModal} />
-			<HomeMain main={elMain} elModal={elModal}/>
+			<Header main={elMain} elModal={elModal} />
+			<HomeMain main={elMain} elModal={elModal} />
 		</>
 	);
 }

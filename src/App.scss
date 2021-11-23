@@ -47,6 +47,20 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #fff;
+	overflow: auto;
+
+	&::-webkit-scrollbar{
+      width: 5px;
+   }
+
+   &::-webkit-scrollbar-track{
+      background: #f1f1f1;
+   }
+
+   &::-webkit-scrollbar-thumb{
+      background: #888;
+      border-radius: 10px;
+   }
 }
 
 #root {
@@ -71,7 +85,30 @@ img {
 	padding: 20px;
 }
 
-
+.main{
+	display: flex;
+	width: 100%;
+	margin-top: 100px;	
+	
+	.content {
+		width: 100%;
+		max-width: calc(100% -255px);
+		height: calc(100vh -85px);
+		padding: 30px;
+		transform: translateX(255px);
+		transition: transform 2s ease;
+	
+		&.contain {
+			max-width: 100%;
+			transform: translateX(0);
+		}
+	
+		&.open {
+			transform: translateX(-255px);
+			transition: transform 2s ease;
+		}
+	}
+}
 
 @media only screen and (max-width: 564px ){
 

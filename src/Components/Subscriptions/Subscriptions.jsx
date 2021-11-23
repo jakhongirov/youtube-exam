@@ -3,7 +3,7 @@ import './Subscriptions.scss';
 
 import { useNavigate } from 'react-router-dom';
 
-function Subscriptions() {
+function Subscriptions({ heading = 'Subscriptions' }) {
 	const [data, setData] = React.useState([]);
 	const navigate = useNavigate();
 
@@ -15,7 +15,7 @@ function Subscriptions() {
 
 	return (
 		<>
-			<h4>Subscriptions</h4>
+			<h4>{heading}</h4>
 
 			<ul className='channel__list'>
 				{data.length > 0 &&
@@ -27,7 +27,7 @@ function Subscriptions() {
 								<img
 									className='channel__img'
 									src='https://stopdtp.com/images/2021/06/05/sample_user_icon.png'
-									alt='img'
+									alt='icon user'
 									width='26'
 									height='26'
 								/>
